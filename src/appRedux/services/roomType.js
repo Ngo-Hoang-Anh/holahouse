@@ -1,7 +1,9 @@
 import { axiosAuth } from "../../util/Api";
 import { axiosCatch } from "../../util/Helper";
 
-const API_URL = process.env.REACT_APP_API_BASE_URL;
+import { REACT_APP_API_BASE_URL } from "../../common/common";
+// services list post
+const API_URL = REACT_APP_API_BASE_URL;
 
 // services list post
 export const reqRoomTypeGetList = async (params = {}) => {

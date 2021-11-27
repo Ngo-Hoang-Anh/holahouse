@@ -1,13 +1,15 @@
-import axios from 'axios';
+import axios from "axios";
+import { REACT_APP_API_BASE_URL } from "../common/common";
+// services list post
 
 export const axiosAuth = (headers = {}) => {
-  const {REACT_APP_API_URL} = process.env;
+  const { REACT_APP_API_URL } = REACT_APP_API_BASE_URL;
   const opts = {
-    baseURL: REACT_APP_API_URL + '/api',
+    baseURL: REACT_APP_API_URL + "/api",
     headers: {
       ...{
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       ...headers,
     },
@@ -16,8 +18,8 @@ export const axiosAuth = (headers = {}) => {
 };
 
 export default axios.create({
-  baseURL: process.env.REACT_APP_API_URL + '/api',
+  baseURL: REACT_APP_API_BASE_URL + "/api",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });

@@ -2,7 +2,9 @@ import { axiosCatch } from "../../util/Helper";
 import { axiosAuth } from "../../util/Api";
 import axios from "axios";
 import React from "react";
-const API_URL = process.env.REACT_APP_API_BASE_URL;
+import { REACT_APP_API_BASE_URL } from "../../common/common";
+// services list post
+const API_URL = REACT_APP_API_BASE_URL;
 export const reqAuth = async (params) => {
   return await axiosAuth()
     .post(`${API_URL}/auth/signin`, params)
