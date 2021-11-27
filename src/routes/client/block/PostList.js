@@ -81,6 +81,7 @@ const PostList = () => {
           <Skeleton active />
         ) : (
           <Table
+            className={"custom-table"}
             size={`small`}
             onChange={({ current }) => postGetList({ page: current })}
             pagination={postPaginate}
