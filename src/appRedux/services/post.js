@@ -80,7 +80,7 @@ export const reqPostCreate = async (payload) => {
   }
   formData.append("post", JSON.stringify(postData));
   return await axiosAuth()
-    .post(`${process.env.REACT_APP_API_BASE_URL}/post/create`, formData, {
+    .post(`${API_URL}/post/create`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -142,7 +142,7 @@ export const reqPostUpdate = async ({ id, payload }) => {
   }
   formData.append("post", JSON.stringify(postData));
   return await axiosAuth()
-    .post(`${process.env.REACT_APP_API_BASE_URL}/post/update/` + id, formData, {
+    .post(`${API_URL}/post/update/` + id, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -152,7 +152,7 @@ export const reqPostUpdate = async ({ id, payload }) => {
 };
 export const reqDeletePost = async (id) => {
   return await axiosAuth()
-    .delete(`${process.env.REACT_APP_API_BASE_URL}/post/delete/` + id, {
+    .delete(`${API_URL}/post/delete/` + id, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -161,7 +161,7 @@ export const reqDeletePost = async (id) => {
 };
 export const reqAdminDeletePost = async (id, content) => {
   return await axiosAuth()
-    .delete(`${process.env.REACT_APP_API_BASE_URL}/post/delete/` + id, {
+    .delete(`${API_URL}/post/delete/` + id, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -183,7 +183,7 @@ export const reqDisapprovePost = async (postId, content) => {
 export const reqUpdateAvailablePost = async (id, number) => {
   return await axiosAuth()
     .put(
-      `${process.env.REACT_APP_API_BASE_URL}/post/update-room-quantity/` + id,
+      `${API_URL}/post/update-room-quantity/` + id,
       { quantity: number },
       {
         headers: {
@@ -195,7 +195,7 @@ export const reqUpdateAvailablePost = async (id, number) => {
 };
 export const reqReUpPost = async (id) => {
   return await axiosAuth()
-    .put(`${process.env.REACT_APP_API_BASE_URL}/post/extend-post/` + id, {
+    .put(`${API_URL}/post/extend-post/` + id, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
