@@ -1,11 +1,9 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
-import { reqPostCreate, reqPostGetList, reqPostUpdate } from "../services/post";
 import {
   POST_TYPE_CHANGE_STATE,
   POST_TYPE_GET_LIST,
   POST_TYPE_GET_LIST_SUCCESS,
 } from "../../constants/ActionTypes";
-import { getPaginate } from "../../util/Helper";
 import { message } from "antd";
 import { reqPostTypeGetList } from "../services/postType";
 

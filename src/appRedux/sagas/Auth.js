@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import {
   all,
   call,
@@ -7,7 +5,6 @@ import {
   put,
   takeEvery,
   takeLatest,
-  take,
 } from "redux-saga/effects";
 import { SIGNIN_USER, SIGNOUT_USER } from "constants/ActionTypes";
 import {
@@ -23,7 +20,6 @@ import { message } from "antd";
 import {
   CHANGE_PASSWORD,
   SIGNUP_USER,
-  FORGOT_PASSWORD,
 } from "../../constants/ActionTypes";
 
 const signOutRequest = async () => {

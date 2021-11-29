@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "antd";
 import { userSignOut } from "../../appRedux/actions";
 
 const ClientHeaderMobile = () => {
-  let { pathname, menu } = useSelector(({ common }) => common);
-  let { token, authUser, role } = useSelector(({ auth }) => auth);
+  let {  menu } = useSelector(({ common }) => common);
+  let { token } = useSelector(({ auth }) => auth);
   const dispatch = useDispatch();
   const closeMenu = () => {
     const body = document.getElementsByTagName("body")[0];

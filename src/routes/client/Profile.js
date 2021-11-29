@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Card, Form, Input, Menu } from "antd";
-import { useDispatch, useSelector } from "react-redux";
+import { Menu } from "antd";
+import { useDispatch } from "react-redux";
 import UserInfo from "./block/UserInfo";
 import { userSignOut } from "../../appRedux/actions";
 import ChangePassword from "./block/ChangePassword";
@@ -8,7 +8,6 @@ import PostList from "./block/PostList";
 
 const Profile = () => {
   const dispatch = useDispatch();
-  let { token, authUser, role } = useSelector(({ auth }) => auth);
   const [blockShow, setBlockShow] = useState("info");
   const getBlock = () => {
     switch (blockShow) {
@@ -41,7 +40,7 @@ const Profile = () => {
         </div>
         <div className={`col-md-9`}>{getBlock()}</div>
       </div>
-    </div >
+    </div>
   );
 };
 export default Profile;

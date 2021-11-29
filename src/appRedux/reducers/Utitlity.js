@@ -1,4 +1,4 @@
-import {UTILITY_CHANGE_STATE, UTILITY_GET_LIST, UTILITY_GET_LIST_SUCCESS} from "../../constants/ActionTypes";
+import {UTILITY_CHANGE_STATE, UTILITY_GET_LIST_SUCCESS} from "../../constants/ActionTypes";
 
 const INITIAL_STATE = {
   load: false,

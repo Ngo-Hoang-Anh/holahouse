@@ -1,6 +1,5 @@
 import {
   ROOM_TYPE_CHANGE_STATE,
-  ROOM_TYPE_GET_LIST,
   ROOM_TYPE_GET_LIST_SUCCESS,
 } from "../../constants/ActionTypes";
 

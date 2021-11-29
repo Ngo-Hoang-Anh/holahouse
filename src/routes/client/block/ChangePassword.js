@@ -56,7 +56,7 @@ const ChangePassword = () => {
             },
             ({ getFieldValue }) => ({
               validator(_, value) {
-                if (getFieldValue("oldpassword") == value) {
+                if (getFieldValue("oldpassword") === value) {
                   return Promise.reject(
                     new Error("Mật khẩu mới không được giống mật khẩu cũ")
                   );

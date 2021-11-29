@@ -1,13 +1,12 @@
-import {all, call, put, takeLatest} from 'redux-saga/effects';
-import {callGetMenu, getCityList} from '../services/common';
-import {message} from 'antd';
+import { all, call, put, takeLatest } from "redux-saga/effects";
+import { callGetMenu, getCityList } from "../services/common";
+import { message } from "antd";
 import {
   COMMON_GET_MENU,
   COMMON_GET_MENU_SUCCESS,
   GET_CITY,
-  RE_GET_ALL_STORES_SUCCESS,
-} from '../../constants/ActionTypes';
-import {listCities} from '../../util/Helper';
+} from "../../constants/ActionTypes";
+import { listCities } from "../../util/Helper";
 
 export function* doGetCities() {
   try {
@@ -27,8 +26,8 @@ export function* doGetCities() {
   }
 }
 
-export function* getMenu({payload}) {
-  const {role} = payload;
+export function* getMenu({ payload }) {
+  const { role } = payload;
   const res = yield call(callGetMenu, role);
   yield put({
     type: COMMON_GET_MENU_SUCCESS,
