@@ -13,11 +13,14 @@ export const reqPostGetList = async (params = {}) => {
 export const reqPostGetAll = async (params = {}) => {
   if (params.page) {
     return await axiosAuth()
-      .post(`${API_URL}/homepage/public-posts?page=` + params.page, params)
+      .post(
+        `${API_URL}/homepage/public-posts?page=` + params.page + "/",
+        params
+      )
       .catch(axiosCatch);
   }
   return await axiosAuth()
-    .post(`${API_URL}/homepage/public-posts`, params)
+    .post(`${API_URL}/homepage/public-posts/`, params)
     .catch(axiosCatch);
 };
 
