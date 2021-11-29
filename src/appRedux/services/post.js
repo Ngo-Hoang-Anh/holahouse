@@ -1,5 +1,5 @@
 import { axiosAuth } from "../../util/Api";
-import { axiosCatch, b64toBlob, base64toFile } from "../../util/Helper";
+import { axiosCatch, b64toBlob } from "../../util/Helper";
 import moment from "moment";
 import { REACT_APP_API_BASE_URL } from "../../common/common";
 // services list post
@@ -69,9 +69,9 @@ export const reqPostCreate = async (payload) => {
     wardCode: payload.wardCode,
     cityCode: payload.cityCode,
   };
-  if (payload.curfew == 1) {
+  if (payload.curfew === 1) {
     payload.curfew = null;
-  } else if (payload.curfew == 2) {
+  } else if (payload.curfew === 2) {
     let strCurfew =
       moment(payload.from).format("HH:mm") +
       " - " +
@@ -131,9 +131,9 @@ export const reqPostUpdate = async ({ id, payload }) => {
     wardCode: payload.wardCode,
     cityCode: payload.cityCode,
   };
-  if (payload.curfew == 1) {
+  if (payload.curfew === 1) {
     payload.curfew = null;
-  } else if (payload.curfew == 2) {
+  } else if (payload.curfew === 2) {
     let strCurfew =
       moment(payload.from).format("HH:mm") +
       " - " +

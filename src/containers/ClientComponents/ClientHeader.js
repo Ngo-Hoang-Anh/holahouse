@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { userSignOut } from "../../appRedux/actions";
-import { Button } from "antd";
 
 const ClientHeader = () => {
-  let { pathname, menu } = useSelector(({ common }) => common);
-  let { token, authUser, role } = useSelector(({ auth }) => auth);
-  const [mobileVisible, setVisible] = useState(false);
+  let {  menu } = useSelector(({ common }) => common);
+  let { token } = useSelector(({ auth }) => auth);
   const dispatch = useDispatch();
   const openMenu = () => {
     const body = document.getElementsByTagName("body")[0];

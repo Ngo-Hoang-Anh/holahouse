@@ -16,14 +16,13 @@ import {
 } from "antd";
 import moment from "moment";
 import { defaultImage, renderNumberFormat } from "../../util/Helper";
-import { PostServices } from "../../constants/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { UTILITY_GET_LIST } from "../../constants/ActionTypes";
 
 const PostDetail = (props) => {
   let { id } = useParams();
   const [post, setPost] = useState(null);
-  const { utilList, utilPaginate } = useSelector(({ utility }) => utility);
+  const { utilList } = useSelector(({ utility }) => utility);
   const [isFavourite, setIsFavourite] = useState(false);
   const dispatch = useDispatch();
   const savePost = () => {

@@ -1,5 +1,4 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
-import { reqPostCreate, reqPostGetList, reqPostUpdate } from "../services/post";
 import {
   ROOM_TYPE_CHANGE_STATE,
   ROOM_TYPE_GET_LIST,

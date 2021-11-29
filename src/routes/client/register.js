@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { SIGNUP_USER } from "../../constants/ActionTypes";

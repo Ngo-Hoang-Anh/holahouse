@@ -1,7 +1,5 @@
 import { axiosCatch } from "../../util/Helper";
 import { axiosAuth } from "../../util/Api";
-import axios from "axios";
-import React from "react";
 import { REACT_APP_API_BASE_URL } from "../../common/common";
 // services list post
 const API_URL = REACT_APP_API_BASE_URL;

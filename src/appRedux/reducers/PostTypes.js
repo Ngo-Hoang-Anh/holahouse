@@ -1,6 +1,5 @@
 import {
   POST_TYPE_CHANGE_STATE,
-  POST_TYPE_GET_LIST,
   POST_TYPE_GET_LIST_SUCCESS,
 } from "../../constants/ActionTypes";
 

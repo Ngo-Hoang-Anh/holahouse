@@ -121,17 +121,17 @@ const PostList = () => {
                 dataIndex: "status",
                 key: "status",
                 render: (status) => {
-                  if (status == "pending") {
+                  if (status === "pending") {
                     return (
                       <label style={{ color: "blue" }}>Đang chờ duyệt</label>
                     );
-                  } else if (status == "approved") {
+                  } else if (status === "approved") {
                     return (
                       <label style={{ color: "green" }}>Đã được duyệt</label>
                     );
-                  } else if (status == "disapproved") {
+                  } else if (status === "disapproved") {
                     return <label style={{ color: "red" }}>Bị từ chối</label>;
-                  } else if (status == "expired") {
+                  } else if (status === "expired") {
                     return (
                       <label style={{ color: "red" }}>Bài đăng hết hạn</label>
                     );
@@ -162,7 +162,7 @@ const PostList = () => {
                       >
                         Xóa
                       </Button>
-                      {raw.status == "approved" && (
+                      {raw.status === "approved" && (
                         <Button
                           type={`default`}
                           size={`small`}
@@ -171,7 +171,7 @@ const PostList = () => {
                           Thay đổi số lượng phòng
                         </Button>
                       )}
-                      {raw.status == "expired" && (
+                      {raw.status === "expired" && (
                         <Button
                           type={`default`}
                           size={`small`}

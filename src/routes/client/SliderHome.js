@@ -1,14 +1,14 @@
 import React from "react";
 import { Carousel } from "antd";
 
-const contentStyle = {
-  height: '350px',
-  marginBottom: '30px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+// const contentStyle = {
+//   height: '350px',
+//   marginBottom: '30px',
+//   color: '#fff',
+//   lineHeight: '160px',
+//   textAlign: 'center',
+//   background: '#364d79',
+// };
 
 const img = {
   maxHeight: '100%',
@@ -18,10 +18,10 @@ const SliderHome = () => {
   return (
     <Carousel effect="fade" autoplay>
       <div>
-        <img style={img} src={require('../../assets/images/carousel/1.png')} />
+        <img style={img} src={require('../../assets/images/carousel/1.png')} alt=""/>
       </div>
       <div>
-        <img style={img} src={require('../../assets/images/carousel/2.png')} />
+        <img style={img} src={require('../../assets/images/carousel/2.png')} alt=""/>
       </div>
     </Carousel>
   )

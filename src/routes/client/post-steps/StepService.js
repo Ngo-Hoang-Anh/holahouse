@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Input, Form, Checkbox, Space, Col, Row, Upload, message} from "antd";
+import {Input, Form, Checkbox, Col, Row, Upload, message} from "antd";
 import ProvinceGroup from "../../../components/ProvinceGroup";
 import {PlusOutlined} from "@ant-design/icons";
 import {useDispatch, useSelector} from "react-redux";
@@ -8,8 +8,7 @@ import {UTILITY_GET_LIST} from "../../../constants/ActionTypes";
 const StepService = ({visible, form}) => {
   const [fileLists, setFileLists] = useState([]);
   const [fileEncode, setFileEncode] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const {utilList, utilPaginate} = useSelector(({utility}) => utility);
+  const {utilList} = useSelector(({utility}) => utility);
   const dispatch = useDispatch();
   const uploadButton = (
     <div>
@@ -22,7 +21,6 @@ const StepService = ({visible, form}) => {
       message.error('Dung lượng ảnh tối đa 10MB!');
       return;
     }
-    setLoading(true);
     if (file.status === "removed") {
       const files = fileEncode.filter((f) => f.uid !== file.uid);
       setFileEncode(files);
@@ -43,7 +41,6 @@ const StepService = ({visible, form}) => {
       });
     }
     setFileLists(fileList);
-    setLoading(false);
   };
   useEffect(() => {
     dispatch({
